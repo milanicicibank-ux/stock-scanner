@@ -1,5 +1,0 @@
-{
-  "name": "Bullish & Bearish Stock Scanner",
-  "description": "A high-performance stock scanner for Index and F&O stocks that identifies candlestick patterns (Hammer, Engulfing, Marubozu, Stars) across multiple timeframes using OHLC data from Google Sheets.",
-  "requestFramePermissions": []
-}
