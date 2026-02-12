@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-  // This is the most important line for GitHub Pages
+  // Base must be './' for GitHub Pages to resolve assets correctly in subfolders
   base: './', 
   build: {
     outDir: 'dist',
