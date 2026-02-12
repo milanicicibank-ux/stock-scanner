@@ -18,7 +18,8 @@
     "react": "https://esm.sh/react@^19.2.4",
     "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
     "react/": "https://esm.sh/react@^19.2.4/",
-    "vite": "https://esm.sh/vite@^7.3.1"
+    "vite": "https://esm.sh/vite@^7.3.1",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.4"
   }
 }
 </script>
@@ -27,9 +28,9 @@
     <div id="root" class="h-full">
       <div class="flex flex-col items-center justify-center h-full text-slate-400 font-medium">
         <i class="fas fa-circle-notch animate-spin text-3xl mb-4 text-indigo-500"></i>
-        Initializing OHLC Terminal...
+        <p id="loading-text">Initializing OHLC Terminal...</p>
       </div>
     </div>
-    <script type="module" src="index.tsx"></script>
+    <script type="module" src="/index.tsx"></script>
   </body>
 </html>
