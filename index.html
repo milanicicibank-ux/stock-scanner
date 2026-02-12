@@ -24,7 +24,12 @@
 </script>
 </head>
   <body class="bg-slate-50 text-slate-900 h-screen overflow-hidden">
-    <div id="root" class="h-full"></div>
+    <div id="root" class="h-full">
+      <!-- This text will disappear once the app loads successfully -->
+      <div class="flex items-center justify-center h-full text-slate-400 font-medium animate-pulse">
+        Initializing OHLC Terminal...
+      </div>
+    </div>
     <script type="module" src="index.tsx"></script>
   </body>
 </html>
