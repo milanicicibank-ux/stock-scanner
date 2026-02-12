@@ -2,15 +2,24 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 
+console.log("Terminal: Starting initialization sequence...");
+
 const rootElement = document.getElementById('root');
 
 if (rootElement) {
-  const root = ReactDOM.createRoot(rootElement);
-  root.render(
-    <React.StrictMode>
-      <App />
-    </React.StrictMode>
-  );
+  try {
+    const root = ReactDOM.createRoot(rootElement);
+    root.render(
+      <React.StrictMode>
+        <App />
+      </React.StrictMode>
+    );
+    console.log("Terminal: React mount successful.");
+  } catch (error) {
+    console.error("Terminal: Critical mount error:", error);
+    const textEl = document.getElementById('loading-text');
+    if (textEl) textEl.innerText = "Error: Failed to launch engine. Check console.";
+  }
 } else {
-  console.error("Critical Error: Root element not found. The app cannot start.");
+  console.error("Terminal: Root element not found in HTML.");
 }
