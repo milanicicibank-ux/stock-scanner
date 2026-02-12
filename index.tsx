@@ -2,24 +2,24 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 
-console.log("Terminal: Starting initialization sequence...");
+console.log("Scanner: Initializing...");
+
+// Help diagnose runtime errors
+window.onerror = function(message, source, lineno, colno, error) {
+  const status = document.getElementById('status-text');
+  if (status) {
+    status.innerText = "Runtime Error: " + message;
+    status.style.color = "red";
+  }
+  return false;
+};
 
 const rootElement = document.getElementById('root');
 
 if (rootElement) {
-  try {
-    const root = ReactDOM.createRoot(rootElement);
-    root.render(
-      <React.StrictMode>
-        <App />
-      </React.StrictMode>
-    );
-    console.log("Terminal: React mount successful.");
-  } catch (error) {
-    console.error("Terminal: Critical mount error:", error);
-    const textEl = document.getElementById('loading-text');
-    if (textEl) textEl.innerText = "Error: Failed to launch engine. Check console.";
-  }
+  const root = ReactDOM.createRoot(rootElement);
+  root.render(<App />);
+  console.log("Scanner: Mounted successfully.");
 } else {
-  console.error("Terminal: Root element not found in HTML.");
+  console.error("Scanner: Root element missing.");
 }
