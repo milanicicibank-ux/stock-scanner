@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-  // Use './' to ensure all generated links in index.html are relative
+  // This is the most important line for GitHub Pages
   base: './', 
   build: {
     outDir: 'dist',
