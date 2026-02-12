@@ -1,8 +1,9 @@
 import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
 
 export default defineConfig({
-  // Base must be './' for GitHub Pages to resolve assets correctly in subfolders
-  base: './', 
+  base: '', 
+  plugins: [react()],
   build: {
     outDir: 'dist',
     emptyOutDir: true,
