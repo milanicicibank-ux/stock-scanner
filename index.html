@@ -28,9 +28,11 @@
     <div id="root" class="h-full">
       <div class="flex flex-col items-center justify-center h-full text-slate-400 font-medium">
         <i class="fas fa-circle-notch animate-spin text-3xl mb-4 text-indigo-500"></i>
-        <p id="loading-text">Initializing OHLC Terminal...</p>
+        <p>Initializing OHLC Terminal...</p>
+        <p class="text-xs mt-2 opacity-50">If this takes more than 10 seconds, please refresh.</p>
       </div>
     </div>
+    <!-- No leading slash here, very important for GitHub Pages -->
     <script type="module" src="index.tsx"></script>
   </body>
 </html>
