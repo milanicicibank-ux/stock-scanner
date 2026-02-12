@@ -26,14 +26,12 @@
 </head>
   <body class="bg-slate-50 text-slate-900 h-screen overflow-hidden">
     <div id="root" class="h-full">
-      <!-- This text only shows if the Javascript fails to load -->
-      <div class="flex flex-col items-center justify-center h-full text-slate-400 font-medium">
+      <div class="flex flex-col items-center justify-center h-full text-slate-400 font-medium text-center p-4">
         <i class="fas fa-circle-notch animate-spin text-3xl mb-4 text-indigo-500"></i>
-        <p id="status-text">Loading ProScan Terminal...</p>
-        <p class="text-xs mt-2 opacity-50">Please wait for the build to finish.</p>
+        <p id="status-text" class="text-lg">Mounting Scanner Engine...</p>
+        <p class="text-xs mt-2 opacity-50">If this persists, try checking the browser console (F12).</p>
       </div>
     </div>
-    <!-- Standard Vite entry point -->
-    <script type="module" src="./index.tsx"></script>
+    <script type="module" src="/index.tsx"></script>
   </body>
 </html>
